@@ -15,7 +15,7 @@ This project has been mounted with a Docker image to be able to run easaly each 
 To use the image you can either mount it from the Docker file by using (**Not recommended**): 
 ```{shell}
 path/to/repo> docker build -t loicbausor/simaposor .
-```
+``` 
 Or download it from the cloud by using (**recommended**) : 
 ```{shell}
 docker pull loicbausor/simaposor
