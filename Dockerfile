@@ -52,7 +52,7 @@ RUN echo "export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/" >> ~/.bashrc
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 RUN pip3 install --upgrade pip
-RUN pip3 install --no-cache-dir notebook==5.* numpy pyspark==3.1.1 spark-nlp==3.0.0 pandas mlflow Keras scikit-spark scikit-learn scipy matplotlib pydot tensorflow graphviz geopy pycountry-convert patool gdown geopandas bokeh wordcloud seaborn  
+RUN pip3 install --no-cache-dir notebook==5.* numpy  pyspark==3.1.1 spark-nlp==3.0.0 pandas mlflow Keras scikit-spark scikit-learn scipy matplotlib pydot tensorflow graphviz geopy pycountry-convert patool gdown geopandas bokeh wordcloud seaborn dill 
 
 USER root
 RUN chown -R ${NB_UID} ${HOME}
