@@ -1,4 +1,6 @@
 # Big data project
+
+⚠ This repo is complete ! Since we have untill the 19th, we will do a last push at the 19th, 23h. However you can start to take a look at the project.
 ## Introduction
 This project aims to analyze and do some machine learning on a sample stack overflow questions data. It contains several parts. The data comes originaly from [the stack exchange archive website](https://archive.org/details/stackexchange) but we explain in the data part how to get exclusively the tables we used (we just took some tables concerning stack overflow and put it at your disposal on a open drive).
 - One part (\Data folder) concerns the data retrieving and loading. (Be sure to look at the readme on this folder for more information)

@@ -18,7 +18,7 @@ from pyspark.mllib.linalg import Vectors  as MLLibVectors
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 c_handler = logging.StreamHandler()
-f_handler = logging.FileHandler("myscript.log")
+f_handler = logging.FileHandler("train_nn.log")
 c_handler.setLevel(logging.DEBUG)
 f_handler.setLevel(logging.DEBUG)
 c_format = logging.Formatter('%(name)s - [%(levelname)s] - %(message)s')
@@ -45,8 +45,9 @@ def create_keras_model(input_dim, output_dim):
 
 if __name__ == "__main__": 
     seed = 2020
-    input_dim = 5000
+    input_dim = 1500
     output_dim = 10
+    epochs = 10
     save_dir = "models"
     model_dir = "/nn"
     features = "text"
@@ -83,7 +84,7 @@ if __name__ == "__main__":
 
     logger.info("Starts Training ...")
     spark_model = SparkMLlibModel(model=model, frequency='epoch', mode='asynchronous',parameter_server_mode='socket')
-    spark_model.fit(df, epochs=20, batch_size=132, verbose=1, validation_split=0.1, categorical=True, nb_classes=output_dim)
+    spark_model.fit(df, epochs=epochs, batch_size=132, verbose=1, validation_split=0.2, categorical=True, nb_classes=output_dim)
 
     logger.info("Training done")
     spark_model._master_network.save(save_dir + model_dir + "/" + filename)

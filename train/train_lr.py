@@ -17,7 +17,7 @@ from pyspark.ml.evaluation import MulticlassClassificationEvaluator
 logger = logging.getLogger(__name__)
 logger.setLevel(logging.DEBUG)
 c_handler = logging.StreamHandler()
-f_handler = logging.FileHandler("myscript.log")
+f_handler = logging.FileHandler("train_lr.log")
 c_handler.setLevel(logging.DEBUG)
 f_handler.setLevel(logging.DEBUG)
 c_format = logging.Formatter('%(name)s - [%(levelname)s] - %(message)s')
