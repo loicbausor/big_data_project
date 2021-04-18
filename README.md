@@ -1,6 +1,6 @@
 # Big data project
 
-⚠ This repo is complete ! Since we have untill the 19th, we will do a last push at the 19th, 23h. However you can start to take a look at the project.
+⚠ This repo is NOT complete ! Since we have untill the 19th, we will do a last push at the 19th, 23h. However you can start to take a look at the project.
 ## Introduction
 This project aims to analyze and do some machine learning on a sample stack overflow questions data. It contains several parts. The data comes originaly from [the stack exchange archive website](https://archive.org/details/stackexchange) but we explain in the data part how to get exclusively the tables we used (we just took some tables concerning stack overflow and put it at your disposal on a open drive).
 - One part (\Data folder) concerns the data retrieving and loading. (Be sure to look at the readme on this folder for more information)
@@ -12,14 +12,15 @@ This project aims to analyze and do some machine learning on a sample stack over
 This project has been mounted with a Docker image to be able to run easaly each notebooks which are based on differents frameworks. 
 
 ### Getting the Docker image
-To use the image you can either mount it from the Docker file by using : 
+To use the image you can either mount it from the Docker file by using (**Not recommended**): 
 ```{shell}
 path/to/repo> docker build -t loicbausor/simaposor .
 ```
-Or download it from the cloud by using : 
+Or download it from the cloud by using (**recommended**) : 
 ```{shell}
 docker pull loicbausor/simaposor
 ```
+(There is no need for Docker Nvidia)
 ### Running the image 
 To run the image and the notebooks inside the container use this command : 
 ```{shell}
@@ -29,7 +30,7 @@ To run the image and the notebooks inside the container use this command :
 * The volume argument connects the repo directory to the work directory of the notebooks (make sure to change it to the repo folder).
 * The jupyter token is the password that would be asked to enter jupyter. 
 
-We use 3 cpus but feel free to change it. Please, you need to allocate at least 8G of RAM to be sure all the project run correctly.
+We use 3 cpus but feel free to change it. Please, you need to allocate at least 8G/9G of RAM to be sure all the project run correctly.
 
 ### Open jupyter notebook 
 1. Open your internet navigator
